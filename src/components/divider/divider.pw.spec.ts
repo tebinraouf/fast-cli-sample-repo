@@ -1,8 +1,8 @@
 import { expect, test } from "@playwright/test";
-import { fixtureURL } from "/Users/tebinraouf/Desktop/design-system/random/spike/fast-cli-spike-3/fast-cli/packages/fast-cli/dist/esm/utilities/playwright.js";
+import { fixtureURL } from "@microsoft/fast-cli/dist/esm/utilities/playwright.js";
 
-test.describe("avatar", () => {
-    const fixture = fixtureURL("avatar");
+test.describe("divider", () => {
+    const fixture = fixtureURL("divider");
 
     test.beforeEach(async ({ page }) => {
         await page.goto(fixture);
@@ -14,7 +14,7 @@ test.describe("avatar", () => {
         expect(pageUrl).toBe(`http://localhost:3000/${fixture}`);
     });
     test("should contain the component in the URL", async ({ page }) => {
-        const element = page.locator("avatar");
+        const element = page.locator("divider");
 
         await expect(element).not.toBeNull();
     });
