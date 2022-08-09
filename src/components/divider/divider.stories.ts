@@ -3,7 +3,7 @@ import { DesignSystem } from "@microsoft/fast-foundation";
 import { dividerDefinition } from "./define.js";
 
 DesignSystem.getOrCreate().withPrefix(
-    "saf"
+    "fast"
 ).register(
     dividerDefinition()
 );
