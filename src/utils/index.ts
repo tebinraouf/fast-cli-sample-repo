@@ -1,0 +1,1 @@
+export const fixtureURL = (id) => `iframe.html?id=${id.replace("-", "")}--${id}&viewMode=story`;

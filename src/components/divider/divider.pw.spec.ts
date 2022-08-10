@@ -1,7 +1,6 @@
 import { expect, test } from "@playwright/test";
-// import { fixtureURL } from "/Users/tebinraouf/Desktop/design-system/random/spike/fast-cli-spike-3/fast-cli/packages/fast-cli/dist/esm/utilities/playwright.js";
+import { fixtureURL } from "../../utils";
 
-export const fixtureURL = (id) => `iframe.html?id=${id.replace("-", "")}--${id}&viewMode=story`;
 
 test.describe("divider", () => {
     const fixture = fixtureURL("divider");

@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { fixtureURL } from "@microsoft/fast-cli/dist/esm/utilities/playwright.js";
+import { fixtureURL } from "../../utils";
 
 test.describe("checkbox", () => {
     const fixture = fixtureURL("checkbox");
