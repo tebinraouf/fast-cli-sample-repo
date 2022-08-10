@@ -1,15 +1,14 @@
 import Template from "./fixtures/base.html";
 import { DesignSystem } from "@microsoft/fast-foundation";
-import { dividerDefinition } from "./define.js";
+import { modalDefinition } from "./define.js";
 
 DesignSystem.getOrCreate().withPrefix(
     "saf"
 ).register(
-    dividerDefinition()
+    modalDefinition()
 );
 
 export default {
-    title: "divider",
+    title: "modal",
 };
-
-export const Divider: () => "*.html" = () => Template;
+export const Modal: () => "*.html" = () => Template;
