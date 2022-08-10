@@ -1,23 +1,17 @@
 import { expect, test } from "@playwright/test";
-// import { fixtureURL } from "/Users/tebinraouf/Desktop/design-system/random/spike/fast-cli-spike-3/fast-cli/packages/fast-cli/dist/esm/utilities/playwright.js";
+import { fixtureURL } from "@microsoft/fast-cli/dist/esm/utilities/playwright.js";
 
-export const fixtureURL = (id) => `iframe.html?id=${id.replace("-", "")}--${id}&viewMode=story`;
-
-test.describe("divider", () => {
-    const fixture = fixtureURL("divider");
-
+test.describe("checkbox", () => {
+    const fixture = fixtureURL("checkbox");
     test.beforeEach(async ({ page }) => {
         await page.goto(fixture);
     });
-
     test("should load the fixture URL", async ({ page }) => {
         const pageUrl = page.url();
-
         expect(pageUrl).toBe(`http://localhost:3000/${fixture}`);
     });
     test("should contain the component in the URL", async ({ page }) => {
-        const element = page.locator("divider");
-
+        const element = page.locator("checkbox");
         await expect(element).not.toBeNull();
     });
 });

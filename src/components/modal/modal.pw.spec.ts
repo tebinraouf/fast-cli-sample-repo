@@ -1,5 +1,8 @@
 import { expect, test } from "@playwright/test";
-import { fixtureURL } from "@microsoft/fast-cli/dist/esm/utilities/playwright.js";
+
+export const fixtureURL = (id) => `iframe.html?id=${id.replace("-", "")}--${id}&viewMode=story`;
+
+// import { fixtureURL } from "@microsoft/fast-cli/dist/esm/utilities/playwright.js";
 
 test.describe("modal", () => {
     const fixture = fixtureURL("modal");
