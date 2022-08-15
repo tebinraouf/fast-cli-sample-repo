@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { fixtureURL } from "../../utils";
+import { fixtureURL } from "../../../utils";
 
 test.describe("tab", () => {
     const fixture = fixtureURL("tab");

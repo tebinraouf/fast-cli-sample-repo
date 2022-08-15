@@ -8,7 +8,7 @@
   "license": "ISC",
   "repository": "",
   "scripts": {
-    "build": "webpack --config=./webpack.prod.cjs",
+    "build": "tsc && webpack --config=./webpack.prod.cjs",
     "eslint": "eslint . --ext .ts",
     "eslint:fix": "eslint . --ext .ts --fix",
     "start": "webpack-dev-server --config=./webpack.dev.cjs --history-api-fallback --progress",
