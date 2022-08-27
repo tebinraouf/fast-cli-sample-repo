@@ -3,7 +3,7 @@ import { DesignSystem, DesignToken } from "@microsoft/fast-foundation";
 import components from "./components/index.js";
 
 export const designSystem = {
-    prefix: "fast",
+    prefix: "saf",
     shadowRootMode: "open"
 }
 
