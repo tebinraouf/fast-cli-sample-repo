@@ -1,0 +1,49 @@
+<h1>Switch</h1>
+<h2>Default</h2>
+<div style="display: flex; flex-direction: column;">
+    <saf-switch></saf-switch>
+    <saf-switch>
+        Dark Mode
+    </saf-switch>
+    <saf-switch checked>
+        New Feature
+        <span slot="checked-message">On</span>
+        <span slot="unchecked-message">Off</span>
+    </saf-switch>
+    <saf-switch>
+        Theme
+        <span slot="checked-message">Dark</span>
+        <span slot="unchecked-message">Light</span>
+    </saf-switch>
+    <saf-switch readonly checked>
+        Readonly
+        <span slot="checked-message">Yes</span>
+        <span slot="unchecked-message">No</span>
+    </saf-switch>
+</div>
+
+<h2>Checked</h2>
+<saf-switch checked></saf-switch>
+
+<!-- Required -->
+<h2>Required</h2>
+<saf-switch required></saf-switch>
+
+<!-- Disabled -->
+<h2>Disabled</h2>
+<div style="display: flex; flex-direction: column;">
+    <saf-switch disabled></saf-switch>
+    <saf-switch disabled>label</saf-switch>
+    <saf-switch disabled checked>checked</saf-switch>
+    <saf-switch disabled checked>
+        checked
+        <span slot="checked-message">On</span>
+        <span slot="unchecked-message">Off</span>
+    </saf-switch>
+</div>
+
+<h2>Inline</h2>
+<saf-switch style="margin-right: 12px;">Light Speed</saf-switch>
+<saf-switch style="margin-right: 12px;">Ridiculous Speed</saf-switch>
+<saf-switch style="margin-right: 12px;">Ludicrous Speed</saf-switch>
+<saf-switch checked>Plaid Speed</saf-switch>
