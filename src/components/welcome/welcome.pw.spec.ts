@@ -6,7 +6,7 @@ test.describe("fast-welcome", () => {
     });
 
     test("should contain a div element", async ({ page }) => {
-        const element = page.locator("fast-welcome > div");
+        const element = page.locator("saf-welcome > div");
 
         await expect(element).not.toBeNull();
     });

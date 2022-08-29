@@ -1,0 +1,22 @@
+<saf-my-site title="Web" id="site" count="20" onclick="handleOnClick()"></saf-my-site>
+
+<button onclick="deleteElement()">Delete Element</button>
+
+
+<script>
+    const mySite = document.getElementById("site")
+    console.log(mySite);
+    mySite.setAttribute("title", "Web 2");
+
+    function deleteElement() {
+        console.log("On Click is called...")
+        const mySite = document.getElementById("site")
+        mySite.remove()
+    }
+
+
+    function handleOnClick() {
+        console.log("Internal Button onClick is clicked")
+    }
+
+</script>

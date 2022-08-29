@@ -2,7 +2,7 @@
     "fastConfig": {
         "rootDir": "./src",
         "componentPath": "./components",
-        "componentPrefix": "fast"
+        "componentPrefix": "saf"
     },
     "template": {
         "afterInstallMessage": "==========================================\n\n Your project has been initialized!\n You have access to the following commands:\n\n Start: npm start\n Test: npm run test\n Build: npm run build\n\n=========================================="
@@ -28,7 +28,7 @@
         "dependencies": {
             "@microsoft/fast-element": "2.0.0-beta.3",
             "@microsoft/fast-foundation": "3.0.0-alpha.4"
-          },
+        },
         "devDependencies": {
             "@playwright/test": "^1.21.0",
             "@storybook/builder-webpack5": "6.5.9",

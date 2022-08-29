@@ -1,16 +1,9 @@
 import { css, ElementStyles } from "@microsoft/fast-element";
 import {
     display,
-    forcedColorsStylesheetBehavior,
     FoundationElementTemplate,
 } from "@microsoft/fast-foundation";
-import { SystemColors } from "@microsoft/fast-web-utilities";
-import {
-    accentFillRest,
-    // heightNumber,
-    neutralForegroundHint,
-} from "@microsoft/adaptive-ui";
-import { heightNumber } from "../../design-system.js";
+
 
 /**
  * Styles for ProgressRing
@@ -19,13 +12,13 @@ import { heightNumber } from "../../design-system.js";
 export const styles: FoundationElementTemplate<ElementStyles> = (
     context,
     definition
-) => 
+) =>
     css`
         ${display('flex')} :host {
             align-items: center;
             outline: none;
-            height: calc(${heightNumber} * 1px);
-            width: calc(${heightNumber} * 1px);
+            height: 32px;
+            width: 32px;
         }
         .progress {
             height: 100%;
@@ -36,7 +29,7 @@ export const styles: FoundationElementTemplate<ElementStyles> = (
             stroke-width: 2px;
         }
         .determinate {
-            stroke: ${accentFillRest};
+            stroke: black;
             fill: none;
             stroke-width: 2px;
             stroke-linecap: round;
@@ -45,7 +38,7 @@ export const styles: FoundationElementTemplate<ElementStyles> = (
             transition: all 0.2s ease-in-out;
         }
         .indeterminate-indicator-1 {
-            stroke: ${accentFillRest};
+            stroke: black;
             fill: none;
             stroke-width: 2px;
             stroke-linecap: round;
@@ -56,10 +49,10 @@ export const styles: FoundationElementTemplate<ElementStyles> = (
         }
         :host(.paused) .indeterminate-indicator-1 {
             animation: none;
-            stroke: ${neutralForegroundHint};
+            stroke: black;
         }
         :host(.paused) .determinate {
-            stroke: ${neutralForegroundHint};
+            stroke: black;
         }
         @keyframes spin-infinite {
             0% {
@@ -75,20 +68,4 @@ export const styles: FoundationElementTemplate<ElementStyles> = (
                 transform: rotate(1080deg);
             }
         }
-    `.withBehaviors(
-        forcedColorsStylesheetBehavior(
-            css`
-                .background {
-                    stroke: ${SystemColors.Field};
-                }
-                .determinate,
-                .indeterminate-indicator-1 {
-                    stroke: ${SystemColors.ButtonText};
-                }
-                :host(.paused) .determinate,
-                :host(.paused) .indeterminate-indicator-1 {
-                    stroke: ${SystemColors.GrayText};
-                }
-            `,
-        ),
-    )
+    `

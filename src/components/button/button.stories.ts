@@ -1,5 +1,5 @@
-import Template from "./fixtures/base.html";
 import { DesignSystem } from "@microsoft/fast-foundation";
+import Template from "./fixtures/base.html";
 import { buttonDefinition } from "./define.js";
 
 DesignSystem.getOrCreate().withPrefix(

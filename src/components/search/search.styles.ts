@@ -1,58 +1,9 @@
 import { css, ElementStyles } from "@microsoft/fast-element";
-import {
-    Button,
-    DesignToken,
-    display,
-    forcedColorsStylesheetBehavior,
+import type {
     FoundationElementTemplate,
 } from "@microsoft/fast-foundation";
-import {
-    // appearanceBehavior,
-    controlCornerRadius,
-    // density,
-    designUnit,
-    // inputFilledForcedColorStyles,
-    // inputFilledStyles,
-    // inputForcedColorStyles,
-    // inputStateStyles,
-    // inputStyles,
-    neutralFillInputRecipe,
-    neutralFillStealthRecipe,
-    neutralForegroundRest,
-    Swatch,
-    typeRampBase,
-} from "@microsoft/adaptive-ui";
-import { heightNumber } from "../../design-system.js";
 
-const clearButtonHover = DesignToken.create<Swatch>("clear-button-hover").withDefault(
-    (target: HTMLElement) => {
-        const buttonRecipe = neutralFillStealthRecipe.getValueFor(target);
-        const inputRecipe = neutralFillInputRecipe.getValueFor(target);
-        return buttonRecipe.evaluate(target, inputRecipe.evaluate(target).focus).hover;
-    }
-);
-  
-  const clearButtonActive = DesignToken.create<Swatch>("clear-button-active").withDefault(
-    (target: HTMLElement) => {
-        const buttonRecipe = neutralFillStealthRecipe.getValueFor(target);
-        const inputRecipe = neutralFillInputRecipe.getValueFor(target);
-        return buttonRecipe.evaluate(target, inputRecipe.evaluate(target).focus).active;
-    }
-);
 
-// export const searchFilledStyles: (
-//     context: ElementDefinitionContext,
-//     definition: FoundationElementDefinition,
-// ) => ElementStyles = (context: ElementDefinitionContext, definition: FoundationElementDefinition) =>
-//     css`
-//         ${inputFilledStyles(context, definition, '.root')}
-//     `.withBehaviors(
-//         forcedColorsStylesheetBehavior(
-//             css`
-//                 ${inputFilledForcedColorStyles(context, definition, '.root')}
-//             `,
-//         ),
-//     );
 
 /**
  * Styles for Search
@@ -63,8 +14,6 @@ export const styles: FoundationElementTemplate<ElementStyles> = (
     definition
 ) =>
     css`
-        ${display('inline-block')}
-        
         .root {
             display: flex;
             flex-direction: row;
@@ -77,7 +26,7 @@ export const styles: FoundationElementTemplate<ElementStyles> = (
             height: calc(100% - 4px);
             margin-top: auto;
             margin-bottom: auto;
-            padding: 0 calc(${designUnit} * 2px + 1px);
+            padding: 3px;
             font-family: inherit;
             font-size: inherit;
             line-height: inherit;
@@ -89,20 +38,19 @@ export const styles: FoundationElementTemplate<ElementStyles> = (
             height: calc(100% - 2px);
             opacity: 0;
             background: transparent;
-            color: ${neutralForegroundRest};
+            color: black;
             fill: currentcolor;
             border: none;
-            border-radius: calc(${controlCornerRadius} * 1px);
-            min-width: calc(${heightNumber} * 1px);
-            ${typeRampBase}
+            border-radius: 5px;
+            min-width: 32px;
             outline: none;
             
         }
         .clear-button:hover {
-        background: ${clearButtonHover};
+        background: black;
         }
         .clear-button:active {
-        background: ${clearButtonActive};
+        background: black;
         }
         :host(:hover:not([disabled], [readOnly])) .clear-button,
         :host(:active:not([disabled], [readOnly])) .clear-button,
@@ -141,14 +89,4 @@ export const styles: FoundationElementTemplate<ElementStyles> = (
         .end {
             margin-inline-end: 11px;
         }
-        ::slotted(${context.tagFor(Button)}) {
-            margin-inline-end: 1px;
-        }
-    `.withBehaviors(
-        // appearanceBehavior('filled', searchFilledStyles(context, definition)),
-        // forcedColorsStylesheetBehavior(
-        //     css`
-        //         ${inputForcedColorStyles(context, definition, '.root')}
-        //     `,
-        // )
-    );
+    `;

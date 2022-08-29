@@ -1,15 +1,12 @@
 import { css, ElementStyles } from "@microsoft/fast-element";
-import {
+import type {
     ElementDefinitionContext,
-    forcedColorsStylesheetBehavior,
     FoundationElementDefinition,
 } from "@microsoft/fast-foundation";
 import {
     controlCornerRadius,
     fillColor,
     neutralForegroundRest,
-    // neutralStrokeLayerRest,
-    typeRampBase,
 } from "@microsoft/adaptive-ui";
 
 /**
@@ -41,7 +38,6 @@ export const styles: (
             padding: 4px 12px;
             height: fit-content;
             width: fit-content;
-            ${typeRampBase}
             white-space: nowrap;       
         }
         
